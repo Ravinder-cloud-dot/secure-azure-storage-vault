@@ -23,16 +23,21 @@ Architecture
      Any other IP (e.g. mobile hotspot) ──❌ Access denied
 
      
-     Azure Services Used
-     
+ 
+
+Azure Services Used
+
 Azure Storage Account (Blob Storage, LRS redundancy)
+
 Storage Account Networking / Firewall rules ("Selected Networks")
+
 Blob container with public/anonymous access disabled
+
 
 Implementation Steps
 
 Provisioned a Storage Account with Blob Storage, selecting Locally-Redundant Storage (LRS) to minimize cost for a lab/demo environment.
-Created a private container (company-backup-vault) with anonymous/public blob access explicitly disabled at both the account and container level.
+Created a private container with anonymous/public blob access explicitly disabled at both the account and container level.
 Configured the Networking firewall, switching from the default "All Networks" setting to "Selected Networks," and added a single approved public IPv4 address to the allow list.
 Uploaded a test file from the whitelisted device to confirm authorized access worked end-to-end through the Azure Portal.
 
