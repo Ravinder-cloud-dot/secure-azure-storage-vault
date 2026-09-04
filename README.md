@@ -4,7 +4,10 @@ Overview
 This project implements a network-restricted Azure Storage Account to demonstrate how sensitive business data (e.g. backups, financial files, contracts) can be protected from public internet exposure using Azure Storage's built-in firewall, rather than relying on access keys or SAS tokens alone.
 
 By default, Azure Storage accounts are reachable from any network. This project shows how to lock that down to a specific, approved IP address only — a common real-world requirement for compliance and data protection.
+
+
 Architecture
+
         Public Internet
               │
      ┌────────┴─────────┐
